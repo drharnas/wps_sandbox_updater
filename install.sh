@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-REPO_URL="https://raw.githubusercontent.com/<your_username>/wps-sandbox-updater/main"
+REPO_URL="https://raw.githubusercontent.com/drharnas/wps-sandbox-updater/main"
 INSTALL_DIR="/usr/local/lib/wps-sandbox-updater"
 
 # Create local install directory
