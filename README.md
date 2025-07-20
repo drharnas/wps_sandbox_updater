@@ -10,7 +10,7 @@ This project provides a secure wrapper around `wps`, `et`, `wpp`, and `wpspdf` w
 ## Install
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/drharnas/wps-office-sandbox/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/drharnas/wps_sandbox_updater/main/install.sh | bash
 ```
 
 ## Requirements
