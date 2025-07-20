@@ -1,26 +1,25 @@
-# WPS Sandbox Updater
+# WPS Office AUR Auto-Updater & Sandbox Wrapper
 
-This tool automatically checks for updates and replaces original WPS Office binaries with secure wrappers using `firejail`.
+This project provides a secure wrapper around `wps`, `et`, `wpp`, and `wpspdf` which:
 
-## What it does
+- Automatically checks for new versions in AUR (`https://aur.archlinux.org/packages/wps-office`)
+- Notifies the user using a graphical dialog (Zenity or KDialog)
+- If accepted, downloads and installs the new version via `makepkg -si`
+- Wraps the original binaries in Firejail sandbox (`--net=none --noprofile`)
 
-- Checks if a newer version is available by comparing with the version in this repository.
-- If a new version is found:
-  - It backs up the original binaries:  
-    `/usr/bin/wps`, `/usr/bin/wpp`, `/usr/bin/et`, `/usr/bin/wpspdf` → `/usr/bin/*_orig`
-  - Replaces them with wrapper scripts that launch the original binaries inside a network-isolated `firejail` sandbox.
-  - Ensures the new scripts are executable.
-
-## Supported binaries
-
-- `et`
-- `wps`
-- `wpp`
-- `wpspdf`
-
-## Example wrapper
-
-After installation, calling `/usr/bin/wps` will actually execute:
+## Install
 
 ```bash
-firejail --noprofile --net=none /usr/bin/wps_orig "$@"
+curl -sSL https://raw.githubusercontent.com/<user>/wps-office-sandbox/main/install.sh | bash
+```
+
+## Requirements
+
+- git
+- base-devel
+- firejail
+- zenity or kdialog
+
+## Purpose
+
+Enhances security by sandboxing WPS Office and keeping it up to date via direct AUR rebuilds.
