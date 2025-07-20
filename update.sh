@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-REMOTE_VERSION_URL="https://raw.githubusercontent.com/<twoja_nazwa_uzytkownika>/wps-sandbox-updater/main/VERSION"
+REMOTE_VERSION_URL="https://raw.githubusercontent.com/drharnas/wps-sandbox-updater/main/VERSION"
 LOCAL_VERSION_FILE="/usr/local/lib/wps-sandbox-updater/VERSION"
 BINARIES=(et wps wpp wpspdf)
 
